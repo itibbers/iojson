@@ -14,9 +14,9 @@
     "json",
     "import",
     "export",
-    "config",
-    "browser",
-    "js"
+    "configuration-files",
+    "pure-javascript",
+    "browser"
   ],
   "author": "itibbers",
   "license": "MIT",
