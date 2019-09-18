@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>IOJSON test</title>
+</head>
+
+<body>
+  <button onclick="exportJSON(data)">export</button>
+  <button onclick="importJSON()">import</button>
+
+  <script type="module">
+    import iojson from './src/index.js'
+    window.iojson = iojson
+  </script>
+  <script>
+    const data = {
+      name: 'itibbers',
+      work: 'frontend'
+    }
+
+    function exportJSON(data) {
+      iojson.exportJSON(data)
+    }
+
+    async function importJSON() {
+      const res = await iojson.importJSON()
+      console.log(res)
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "iojson",
+  "version": "1.0.0",
+  "description": "Import and export json file with pure javascript in browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itibbers/iojson.git"
+  },
+  "keywords": [
+    "json",
+    "import",
+    "export",
+    "config",
+    "browser",
+    "js"
+  ],
+  "author": "itibbers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itibbers/iojson/issues"
+  },
+  "homepage": "https://github.com/itibbers/iojson#readme"
+}
