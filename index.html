@@ -25,8 +25,12 @@
     }
 
     async function importJSON() {
-      const res = await iojson.importJSON()
-      console.log(res)
+      try {
+        const res = await iojson.importJSON()
+        console.log(res)
+      } catch (e) {
+        console.error(e)
+      }
     }
   </script>
 </body>

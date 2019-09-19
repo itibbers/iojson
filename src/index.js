@@ -17,17 +17,18 @@ class IO {
 
   importJSON() {
     return new Promise((resolve, reject) => {
-      let file = document.createElement('input')
-      file.type = 'file'
-      file.onchange = (event) => {
+      let input = document.createElement('input')
+      input.type = 'file'
+      input.onchange = (event) => {
         let files = event.target.files
         if (!files || !files.length) {
-          file = null
-          reject({
-            errno: -1,
-            msg: 'No files'
-          })
+          input = null
+          reject(new Error('No files'))
         }
+
+        // if (files[0].type !== 'application/json') {
+        //   reject(new Error('It is not a json file'))
+        // }
 
         let reader = new FileReader()
         reader.onload = (event) => {
@@ -37,12 +38,12 @@ class IO {
           } catch (e) {
             reject(e)
           }
-          file = null
+          input = null
         }
         reader.readAsText(files[0])
       }
 
-      file.click()
+      input.click()
     })
   }
 }
