@@ -10,7 +10,7 @@ class IO {
       filename += '.json'
     }
     link.download = filename
-    link.href = 'data:text/plain,' + JSON.stringify(data)
+    link.href = 'data:application/json;charset=utf-8,' + encodeURIComponent( JSON.stringify( data ) )
     link.click()
     link = null
   }
