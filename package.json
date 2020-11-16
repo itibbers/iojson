@@ -1,6 +1,6 @@
 {
   "name": "iojson",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Import and export json file with pure javascript in browser.",
   "main": "src/index.js",
   "scripts": {
